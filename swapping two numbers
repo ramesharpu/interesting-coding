@@ -1,0 +1,29 @@
+# Declaration of the variables
+a = 5;
+b = 7;
+
+# Approach-1: Using a temp variable
+temp = a;
+a = b;
+b = temp;
+System.out.println("a = "+a+", b = "+b);
+
+# Approach-2: Without using temp variable (sum approach)
+a = a + b;
+b = a - b;
+a = a - b;
+System.out.println("a = "+a+", b = "+b);
+
+# Approach-3: Without using temp variable (bitwise exclusive OR - XOR approach)
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+System.out.println("a = "+a+", b = "+b);
+
+# Approach-4: One line approach
+a = a + b - (b = a);
+System.out.println("a = "+a+", b = "+b);
+
+# Pythonic way:
+a,b = b,a
+
